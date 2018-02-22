@@ -57,24 +57,7 @@ export default {
   data () {
     return {
       isIndex: false,
-      sidebarlists: [
-        {name: 'GitHub',
-          link: 'https://github.com/coolucifer',
-          src: './static/img/github-logo-b.png'
-        },
-        {name: 'GitHub',
-          link: 'https://github.com/coolucifer',
-          src: './static/img/github-logo-b.png'
-        },
-        {name: 'GitHub',
-          link: 'https://github.com/coolucifer',
-          src: './static/img/github-logo-b.png'
-        },
-        {name: 'GitHub',
-          link: 'https://github.com/coolucifer',
-          src: './static/img/github-logo-b.png'
-        }
-      ]
+      sidebarlists: []
     }
   },
   components: {

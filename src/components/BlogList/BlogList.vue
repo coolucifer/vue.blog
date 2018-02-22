@@ -19,14 +19,24 @@
 </template>
 
 <script>
+import Bus from '@/Bus.js'
+
 export default {
   name: 'BlogList',
 
   data () {
-    return {}
+    return {
+      isIndex: true
+    }
   },
   props: {
     bloglists: {
+      type: Array,
+      default: function () {
+        return []
+      }
+    },
+    sidebarlists: {
       type: Array,
       default: function () {
         return []
@@ -35,8 +45,11 @@ export default {
   },
   methods: {
     operate: function (link) {
-
     }
+  },
+  mounted () {
+    Bus.bus.$emit('sidebarlists', this.sidebarlists)
+    Bus.bus.$emit('isIndex', this.isIndex)
   }
 }
 </script>

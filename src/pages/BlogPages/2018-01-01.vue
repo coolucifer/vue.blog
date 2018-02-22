@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Bus from '@/assets/Bus.js'
+import Bus from '@/Bus.js'
 export default {
   name: 'JanFirst',
 

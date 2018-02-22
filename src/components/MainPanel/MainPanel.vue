@@ -4,7 +4,7 @@
       <div class="main-column">
         <router-view :bloglists="bloglists">66666</router-view>
       </div>
-      <side-bar></side-bar>
+      <side-bar :isIndex="isIndex"></side-bar>
     </div>
   </div>
 </template>
@@ -22,6 +22,12 @@ export default {
       type: Array,
       default: function () {
         return []
+      }
+    },
+    isIndex: {
+      type: Boolean,
+      default: function () {
+        return true
       }
     }
   },

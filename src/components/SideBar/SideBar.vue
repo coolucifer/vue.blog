@@ -28,26 +28,16 @@ export default {
   data () {
     return {
       sidebarlists: [],
-      // sidebarlists: [
-      //   {name: 'GitHub',
-      //     link: 'https://github.com/coolucifer',
-      //     src: './static/img/github-logo-b.png'
-      //   },
-      //   {name: 'GitHub',
-      //     link: 'https://github.com/coolucifer',
-      //     src: './static/img/github-logo-b.png'
-      //   },
-      //   {name: 'GitHub',
-      //     link: 'https://github.com/coolucifer',
-      //     src: './static/img/github-logo-b.png'
-      //   },
-      //   {name: 'GitHub',
-      //     link: 'https://github.com/coolucifer',
-      //     src: './static/img/github-logo-b.png'
-      //   }
-      // ],
       isTop: false,
       sideBarWidth: ''
+    }
+  },
+  props: {
+    isIndex: {
+      type: Boolean,
+      default: function () {
+        return true
+      }
     }
   },
   computed: {
@@ -63,10 +53,14 @@ export default {
       // console.log($('.outline').width())
       // console.log(this.offsetTop)
       // console.log('scroll: ' + scrollTop)
-      if (scrollTop > this.offsetTop - 75) {
-        this.isTop = true
+      if (this.isIndex) {
+        if (scrollTop > this.offsetTop - 75) {
+          this.isTop = true
+        } else {
+          this.isTop = false
+        }
       } else {
-        this.isTop = false
+        this.isTop = true
       }
     },
     changeSideBarWidth () {

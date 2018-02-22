@@ -19,6 +19,14 @@ export default {
       isTop: false
     }
   },
+  props: {
+    isIndex: {
+      type: Boolean,
+      default: function () {
+        return true
+      }
+    }
+  },
   computed: {
     offsetTop: function () {
       return document.querySelector('.navbar').offsetTop
@@ -26,12 +34,17 @@ export default {
   },
   methods: {
     checkTop () {
-      let scrollTop = document.body.scrollTop
+      if (this.isIndex) {
+        let scrollTop = document.body.scrollTop
       // console.log('nav: ' + this.offsetTop)
-      if (scrollTop > this.offsetTop) {
-        this.isTop = true
+      // console.log('offsetTop: ' + this.offsetTop)
+        if (scrollTop > this.offsetTop) {
+          this.isTop = true
+        } else {
+          this.isTop = false
+        }
       } else {
-        this.isTop = false
+        this.isTop = true
       }
     },
     listen () {
@@ -40,6 +53,7 @@ export default {
   },
   mounted () {
     this.listen()
+    console.log('isIndex: ' + this.isIndex)
   }
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
  <div id="index-page">
     <header-box v-if="isIndex"></header-box>
-    <nav-bar></nav-bar>
-    <main-panel :bloglists="bloglists">
+    <nav-bar :isIndex="isIndex"></nav-bar>
+    <main-panel :bloglists="bloglists" :isIndex="isIndex">
     </main-panel>
  </div>
 </template>
@@ -43,8 +43,8 @@ export default {
   mounted () {
     Bus.bus.$on('isIndex', data => {
       this.isIndex = data
+      console.log('isIndex: ' + this.isIndex)
     })
-    console.log(this.isIndex)
   }
 }
 </script>
