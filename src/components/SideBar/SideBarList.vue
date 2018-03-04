@@ -12,6 +12,8 @@
 </template>
 
 <script>
+// import Bus from '@/Bus.js'
+
 export default {
   name: 'SideBarList',
   data () {
@@ -24,6 +26,8 @@ export default {
         return []
       }
     }
+  },
+  methods: {
   }
 }
 </script>

@@ -8,8 +8,7 @@
           <a class="list-group-item"
             :sidebarlists="sidebarlists" 
             v-for="(list,index) in sidebarlists" :key="index"
-            :href="list.link" 
-            target="_blank">
+            @click="smoothScroll(list.link)">
             <img :src="list.src" alt="">
             {{list.name}}
           </a>
@@ -46,10 +45,13 @@ export default {
     }
   },
   methods: {
+    smoothScroll (data) {
+      Bus.bus.$emit('smoothscroll', data)
+    },
     checkTop () {
       let scrollTop = document.body.scrollTop
       // console.log(this.offsetTop)
-      console.log('sidebarwidth: ' + this.sideBarWidth)
+      // console.log('sidebarwidth: ' + this.sideBarWidth)
       // console.log($('.outline').width())
       // console.log(this.offsetTop)
       // console.log('scroll: ' + scrollTop)
@@ -81,6 +83,11 @@ export default {
   },
   components: {
     SideBarList
+  },
+  watch: {
+    '$route': function () {
+      this.isTop = false
+    }
   }
 }
 </script>

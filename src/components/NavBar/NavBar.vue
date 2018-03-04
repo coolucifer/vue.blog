@@ -46,6 +46,7 @@ export default {
       } else {
         this.isTop = true
       }
+      // console.log('topChecked!', this.isTop)
     },
     listen () {
       window.addEventListener('scroll', this.checkTop)
@@ -54,6 +55,12 @@ export default {
   mounted () {
     this.listen()
     console.log('isIndex: ' + this.isIndex)
+  },
+  watch: {
+    '$route': function () {
+      this.isTop = false
+      // this.checkTop()
+    }
   }
 }
 </script>

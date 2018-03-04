@@ -46,13 +46,15 @@
 
 <script>
 import hljs from 'highlight.js'
+import Bus from '@/Bus.js'
 
 export default {
-  name: '',
+  name: 'NovTwentySixth',
 
   data () {
     return {
-
+      isIndex: false,
+      sidebarlists: []
     }
   },
   components: {
@@ -60,6 +62,8 @@ export default {
   },
   mounted () {
     hljs.highlightCode()
+    Bus.bus.$emit('isIndex', this.isIndex)
+    Bus.bus.$emit('sidebarlists', this.sidebarlists)
   }
 }
 </script>
