@@ -44,8 +44,6 @@ export default {
     }
   },
   methods: {
-    operate: function (link) {
-    }
   },
   mounted () {
     Bus.bus.$emit('sidebarlists', this.sidebarlists)

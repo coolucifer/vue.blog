@@ -24,6 +24,7 @@ export default {
         {title: '666', date: '2018-01-01'},
         {title: '666', date: '2018-01-01'},
         {title: '666', date: '2018-01-01'},
+        {title: 'userAgent与浏览器伪装', date: '2017-12-12'},
         {title: 'Vue.js实战: 清单应用', date: '2017-12-06'},
         {title: 'jQuery实战: 表单验证(下)', date: '2017-11-29'},
         {title: 'jQuery实战: 表单验证(上)', date: '2017-11-26'},
@@ -40,6 +41,15 @@ export default {
     MainPanel
   },
   methods: {
+    smoothScroll (data) {
+      let $target = $(data)
+      let targetOffset = $target.offset().top
+      $('html,body').animate({
+        scrollTop: targetOffset
+      },
+      500)
+      return false
+    }
   },
   mounted () {
     Bus.bus.$on('isIndex', data => {
@@ -48,18 +58,16 @@ export default {
     })
     // 平滑滚动
     Bus.bus.$on('smoothscroll', data => {
-      // if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-        // var $target = $(this.hash)
-      let $target = $(data)
-        // $target = ($target.length && $target) || $('[name=' + this.hash.slice(1) + ']')
-      let targetOffset = $target.offset().top
-      $('html,body').animate({
-        scrollTop: targetOffset
-      },
-      500)
-      return false
-      // }
+      this.smoothScroll(data)
     })
+  },
+  watch: {
+    '$route': function () {
+      if (this.$route.path !== '/' && this.$route.path !== '/blog' && this.$route.path !== '/practices') {
+        // this.smoothScroll('#index-page')
+        document.body.scrollTop = 0
+      }
+    }
   }
 }
 </script>

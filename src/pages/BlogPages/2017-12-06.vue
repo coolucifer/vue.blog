@@ -151,7 +151,7 @@ import Bus from '@/Bus.js'
 import Img from '@/assets/images/blog-use/17-12-06-page-frame.png'
 
 export default {
-  name: 'NovTwentiyFirst',
+  name: 'DecSixth',
 
   data () {
     return {

@@ -7,7 +7,7 @@
 
 <script>
 // import BlogList from '@/components/BlogList'
-import SixSixSix from '@/pages/BlogPages/2018-01-01'
+import SixSixSix from '@/pages/BlogPages/2017-12-06'
 
 export default {
   name: 'Test',
