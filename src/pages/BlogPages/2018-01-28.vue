@@ -7,9 +7,9 @@
         </router-link>
       </li>
       <li class="next disabled">
-        <router-link to="/2017-12-23">下一篇
+        <a>下一篇
           <span aria-hidden="true">&rarr;</span>
-        </router-link>
+        </a>
       </li>
     </ul>
     <h1>ES6面向对象:绚丽小球</h1>

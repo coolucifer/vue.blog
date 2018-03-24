@@ -9,7 +9,8 @@ module.exports = {
 
     // Paths
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
+    // assetsPublicPath: './', // build之前把这个值改为'./'
     proxyTable: {},
 
     // Various Dev Server settings
