@@ -24,6 +24,8 @@ export default {
         {title: '666', date: '2018-01-01'},
         {title: '666', date: '2018-01-01'},
         {title: '666', date: '2018-01-01'},
+        {title: 'ES6面向对象:绚丽小球', date: '2018-01-28'},
+        {title: 'JS写一个2048', date: '2017-12-23'},
         {title: 'userAgent与浏览器伪装', date: '2017-12-12'},
         {title: 'Vue.js实战: 清单应用', date: '2017-12-06'},
         {title: 'jQuery实战: 表单验证(下)', date: '2017-11-29'},
