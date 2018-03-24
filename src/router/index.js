@@ -22,6 +22,6 @@ routes = routes.concat(BlogList)
 routes = routes.concat(BlogPages)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   routes: routes
 })

@@ -111,7 +111,24 @@ export default {
   data () {
     return {
       isIndex: false,
-      sidebarlists: []
+      sidebarlists: [
+        {name: '创建小球类',
+          link: '#chapt1',
+          src: './static/img/attach.png'
+        },
+        {name: '创建移动的小球',
+          link: '#chapt2',
+          src: './static/img/attach.png'
+        },
+        {name: '监听事件及实例化',
+          link: '#chapt3',
+          src: './static/img/attach.png'
+        },
+        {name: '刷新canvas及清理冗余',
+          link: '#chapt4',
+          src: './static/img/attach.png'
+        }
+      ]
     }
   },
   components: {

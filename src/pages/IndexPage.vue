@@ -20,10 +20,6 @@ export default {
   data () {
     return {
       bloglists: [
-        {title: 'test', date: 'test'},
-        {title: '666', date: '2018-01-01'},
-        {title: '666', date: '2018-01-01'},
-        {title: '666', date: '2018-01-01'},
         {title: 'ES6面向对象:绚丽小球', date: '2018-01-28'},
         {title: 'JS写一个2048', date: '2017-12-23'},
         {title: 'userAgent与浏览器伪装', date: '2017-12-12'},

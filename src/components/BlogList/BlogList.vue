@@ -53,6 +53,12 @@ export default {
 </script>
 
 <style scoped>
+
+h3 {
+  padding-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 .post-list-item {
     padding: 20px;
     margin-bottom: 10px;

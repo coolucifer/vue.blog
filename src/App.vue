@@ -27,8 +27,8 @@ export default {
 img {
     user-select: none;
 }
-a:hover,
-a:focus {
+#index-page a:hover,
+#index-page a:focus {
     text-decoration: none;
     cursor: pointer;
     color: #23527c;
